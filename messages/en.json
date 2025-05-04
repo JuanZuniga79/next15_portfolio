@@ -1,0 +1,51 @@
+{
+  "Config": {
+    "lang": "en",
+    "1": "January",
+    "2": "February",
+    "3": "March",
+    "4": "April",
+    "5": "May",
+    "6": "June",
+    "7": "July",
+    "8": "August",
+    "9": "September",
+    "10": "October",
+    "11": "November",
+    "12": "December",
+    "present": "Present",
+    "paused": "Paused"
+  },
+  "Home": {
+    "info": "Professional Information",
+    "job": "Systems engineer specialized in multiplatforms software development",
+    "contact": "Contact",
+    "services": "Services",
+    "skill": "Outstanding skills",
+    "experience": "Experience",
+    "programming": "Programming",
+    "years": "Years",
+    "clients": "Clients",
+    "projects": "Projects",
+    "bc": "Business Clients"
+  },
+  "Services": {
+    "title": "Services",
+    "subtitle": "I can tackle almost any type of software project, but these are my specialty.",
+    "know": "Know More"
+  },
+  "ExperienceNEducation": {
+    "title": "Experience and Education",
+    "subtitle": "All my official experience and education is listed here.",
+    "see": "See Details",
+    "work": "Work Experience",
+    "achievement": "Achievements",
+    "education": "Education"
+  },
+  "Skills": {
+    "title": "Skills",
+    "subtitle": "I have a lot of skills and I am constantly learning new things.",
+    "experience": "years",
+    "skill": "proficiency"
+  }
+}

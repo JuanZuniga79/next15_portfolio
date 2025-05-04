@@ -1,0 +1,7 @@
+﻿.profile{
+    box-shadow: 0 0 25px var(--color-dark-primary);
+}
+
+body.dark .profile{
+    box-shadow: 0 0 25px var(--color-primary);
+}

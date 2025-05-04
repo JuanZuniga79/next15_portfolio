@@ -1,0 +1,22 @@
+﻿.navItem::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    width: 100%;
+    z-index: 10;
+    background-color: var(--color-sky);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.5s ease;
+}
+
+body.dark .navItem::after {
+    background-color: var(--color-dark-red);
+}
+
+.navItem:hover::after,
+.navItem.active::after {
+    transform: scaleX(1);
+}
