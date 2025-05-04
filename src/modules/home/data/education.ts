@@ -10,8 +10,10 @@ const en: IEducationTimeline[] = [
 
 const es: IEducationTimeline[] = [
     {title: "Ingenieria de Sistemas | Universidad Del Magdalena", location: "Colombia, Santa Marta", start: new Date(2019, 8, 1), end: new Date(), type: "Pregrado"},
-    {title: "Back-end Bootcamp | Oracle Next Education", location: "En Linea", start: new Date(2023, 4, 1), end: new Date(2024, 10, 2), type: "Bootcamp"},
-    {title: ".Net Full Stack Foundation | Board Infinity", location: "En Linea", start: new Date(2024, 2, 1), end: new Date(2024, 4, 9), type: "Curso"}
+    {title: "Back-end Oracle Next Education | Alura ONE", location: "On Line", start: new Date(2023, 4, 1), end: new Date(2024, 10, 2), type: "Bootcamp"},
+    {title: ".Net Full Stack Foundation | Board Infinity", location: "On Line", start: new Date(2024, 2, 1), end: new Date(2024, 4, 9), type: "Curso"},
+    {title: "Introducción al Desarrollo de Aplicaciones Móviles Android | Meta", location: "On Line", start: new Date(2023, 10, 1), end: new Date(2024, 2, 29), type: "Curso"},
+    {title: "Control de Versiones | Meta", location: "On Line", start: new Date(2024, 9, 1), end: new Date(2024, 11, 5), type: "Curso"},
 ]
 
 const getEducation = async (lang: string): Promise<IEducationTimeline[]> => {

@@ -16,7 +16,7 @@ export default async function Skills({locale}: Props) {
     const t = await getTranslations("Skills")
 
     return(
-        <SectionContainer title={t('title')} subtitle={t('subtitle')}>
+        <SectionContainer id="skills" title={t('title')} subtitle={t('subtitle')}>
             <Suspense fallback={<div>Loading...</div>}>
                 <SkillsContainer />
             </Suspense>

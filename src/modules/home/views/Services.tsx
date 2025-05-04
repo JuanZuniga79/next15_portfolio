@@ -27,9 +27,9 @@ export default async function Services({locale}: Props){
                                         <item.icon/>
                                     </figure>
                                 </div>
-                                <h5 className="font-mono text-lg">{item.title}</h5>
+                                <h5 className="font-mono font-semibold text-lg">{item.title}</h5>
                             </div>
-                            <p>{item.description}</p>
+                            <p className="text-sm font-sans">{item.description}</p>
                         </div>
                         <Link href="/about/#services"
                               className="py-4 px-8 border-t border-crust text-sm capitalize font-mono flex items-center

@@ -1,17 +1,18 @@
 ﻿import {INav} from "@/core/types/INav";
 
-const about = "/about/"
-const projects = "/projects/"
+const home = ""
+const skills = "skills"
+const projects = "projects"
 
 const en: INav[] = [
-    {label: "home", href: "/"},
-    {label: "about me", href: about},
+    {label: "home", href: home},
+    {label: "skills", href: skills},
     {label: "projects", href: projects},
 ]
 
 const es: INav[] = [
-    {label: "inicio", href: "/"},
-    {label: "sobre mi", href: about},
+    {label: "inicio", href: home},
+    {label: "habilidades", href: skills},
     {label: "proyectos", href: projects}
 ]
 

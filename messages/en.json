@@ -44,8 +44,16 @@
   },
   "Skills": {
     "title": "Skills",
-    "subtitle": "I have a lot of skills and I am constantly learning new things.",
+    "subtitle": "These are some of the skills I have acquired in my professional career.",
     "experience": "years",
     "skill": "proficiency"
+  },
+  "Testimonials": {
+    "title": "Testimonials",
+    "subtitle": "What people and companies say about me."
+  },
+  "Projects": {
+    "title": "projects",
+    "subtitle": "These are the best projects I have worked on."
   }
 }

@@ -1,7 +1,7 @@
 ﻿import getNavItems from "@/core/data/navData";
-import {Link} from "@/i18n/navigation";
 import "@/core/styles/nav.css"
 import {headers} from "next/headers";
+import Link from "../components/Link";
 
 interface Props{
     lang: string
@@ -21,9 +21,7 @@ export default async function Nav({lang}: Props){
                     <li key={i} className={`navItem relative capitalize font-sans px-3 
                         ${pathname === item.href && "active text-text dark:text-dark-text"} transition-colors 
                         focus-visible:outline-none duration-300 font-medium text-base`}>
-                        <Link href={item.href} className="text-nowrap">
-                            {item.label}
-                        </Link>
+                        <Link id={item.href} label={item.label} />
                     </li>
                 ))}
             </ul>

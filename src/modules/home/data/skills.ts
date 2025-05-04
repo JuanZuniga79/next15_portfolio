@@ -42,7 +42,7 @@ const skills: ISkill[] = [
             frequency: "monthly", level: "beginner", relatedSkills: ["wasm", "linux", "unix", "rocket"]},
         {icon: CIcon, name: "c", experience: 0, subcategory: "SO",
             frequency: "monthly", level: "beginner", relatedSkills: ["linux", "unix"]},
-        {icon: CppIcon, name: "cpp", experience: 0, subcategory: "general",
+        {icon: CppIcon, name: "c++", experience: 0, subcategory: "general",
             frequency: "monthly", level: "beginner", relatedSkills: ["linux", "unix", "video games"]},
         {icon: SQLIcon, name: "sql", experience: 4, subcategory: "database", frequency: "daily", level: "advanced",
             relatedSkills: ["mysql", "postgres", "mongo", "redis"]},

@@ -41,5 +41,19 @@
     "work": "Experiencia laboral",
     "achievement": "Logros",
     "education": "Educación"
+  },
+  "Skills": {
+    "title": "Habilidades",
+    "subtitle": "Estas son algunas de las habilidades que he desarrollado en mi carrera profesional.",
+    "experience": "años",
+    "skill": "Habilidad"
+  },
+  "Testimonials": {
+    "title": "Testimonios",
+    "subtitle": "Que dicen las personas y las empresas sobre mi."
+  },
+  "Projects": {
+    "title": "Proyectos",
+    "subtitle": "Estos son los mejores proyectos en los que he trabajado."
   }
 }

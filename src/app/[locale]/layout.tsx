@@ -41,10 +41,10 @@ export default async function LocaleLayout({children, params}: { children: React
         <html lang={locale}>
             <body className={`${dmSans.variable} ${jetbrainsMono.variable} ${robotoSerif.variable} antialiased
                 bg-primary dark:bg-dark-primary flex flex-col items-center transition-colors duration-100
-                min-h-dvh w-dvw scrollbar overflow-y-auto overflow-x-hidden`}>
+                min-h-dvh w-dvw scrollbar scroll-smooth overflow-y-auto overflow-x-hidden`}>
                 <NextIntlClientProvider>
                     <Header/>
-                    <main className="relative min-h-dvh h-fit w-[80%] flex flex-col gap-y-14 text-text
+                    <main className="relative min-h-dvh h-fit w-[80%] flex flex-col gap-y-20 text-text
                         dark:text-dark-text pb-16">
                         {children}
                     </main>
