@@ -4,20 +4,19 @@ import getTestimonials from "../data/testimonials";
 import Testimonial from "../components/Testimonial";
 
 interface Props {
-    locale: string;
+	locale: string;
 }
-export default async function Testimonials({locale}: Props) {
+export default async function Testimonials({ locale }: Props) {
+	const t = await getTranslations("Testimonials");
+	const data = await getTestimonials(locale);
 
-    const t = await getTranslations("Testimonials");
-    const data = await getTestimonials(locale);
-
-    return(
-        <SectionContainer title={t("title")} subtitle={t("subtitle")}>
-            <ul className="relative w-full h-fit grid grid-cols-3 gap-5">
-                {data.map((testimonial, index) => (
-                    <Testimonial key={index} data={testimonial} />
-                ))}
-            </ul>
-        </SectionContainer>
-    )
+	return (
+		<SectionContainer title={t("title")} subtitle={t("subtitle")}>
+			<ul className="relative w-full h-fit grid grid-cols-3 gap-5">
+				{data.map((testimonial, index) => (
+					<Testimonial key={index} data={testimonial} />
+				))}
+			</ul>
+		</SectionContainer>
+	);
 }
