@@ -39,7 +39,6 @@ export default function ProjectContainer({ locale }: Props) {
 				{filters.map((filter, index) => (
 					<li key={index} className="w-full h-fit">
 						<Combobox
-							values={activeFilters}
 							content={filter.items}
 							title={filter.label}
 							onChange={(items) => {
