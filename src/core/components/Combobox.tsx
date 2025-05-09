@@ -3,7 +3,7 @@ import {
 	PopoverTrigger,
 	PopoverContent,
 } from "@/core/components/ui/popover";
-import { useCallback, useState, useEffect } from "react";
+import { useState } from "react";
 import { Button } from "./ui/button";
 import { ChevronsUpDown, Check } from "lucide-react";
 import {

@@ -28,7 +28,7 @@ export default function ProjectContainer({ locale }: Props) {
 	useEffect(() => {
 		debouncedProjects(locale, activeFilters);
 		return () => debouncedProjects.cancel();
-	}, [activeFilters]);
+	}, [activeFilters, locale, debouncedProjects]);
 
 	return (
 		<div className="flex flex-col gap-y-5">
