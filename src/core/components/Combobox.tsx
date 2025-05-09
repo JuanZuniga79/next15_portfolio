@@ -19,24 +19,11 @@ import { cn } from "@/core/lib/utils";
 interface Props {
 	title: string;
 	content: string[];
-	onChange?: (items: string[]) => void;
+	onChange: (items: string[]) => void;
 }
 export default function Combobox({ title, content, onChange }: Props) {
+	const [values, setValues] = useState<string[]>([]);
 	const [open, setOpen] = useState<boolean>(false);
-	const [value, setValue] = useState<string[]>([]);
-
-	const handleSelect = useCallback((currentValue: string) => {
-		setValue((prevValue) =>
-			prevValue.includes(currentValue)
-				? prevValue.filter((item) => item !== currentValue)
-				: [...prevValue, currentValue],
-		);
-	}, []);
-
-	useEffect(() => {
-		if (!onChange) return;
-		onChange(value);
-	}, [onChange, value]);
 
 	return (
 		<Popover open={open} onOpenChange={setOpen}>
@@ -48,8 +35,8 @@ export default function Combobox({ title, content, onChange }: Props) {
 					className="w-full justify-between capitalize font-sans border-[1px] border-mantle hover:border-crust cursor-pointer hover:bg-mantle
             dark:border-dark-mantle dark:hover:border-dark-crust dark:hover:bg-dark-crust dark:text-dark-text"
 				>
-					{value.length >= 1
-						? `${value.length > 1 ? `selected ${value.length} items` : value[0]}`
+					{values.length >= 1
+						? `${values.length > 1 ? `selected ${values.length} items` : values[0]}`
 						: `Select an ${title}`}
 					<ChevronsUpDown className="ml-2 w-4 h-4 opacity-50" />
 				</Button>
@@ -65,7 +52,11 @@ export default function Combobox({ title, content, onChange }: Props) {
 									key={i}
 									value={item}
 									onSelect={(currentValue) => {
-										handleSelect(currentValue);
+										const value = values.includes(currentValue)
+											? values.filter((item) => item !== currentValue)
+											: [...values, currentValue];
+										setValues(value);
+										onChange(value);
 									}}
 									className="flex items-center justify-between capitalize font-mono cursor-pointer hover:bg-crust dark:hover:bg-dark-crust"
 								>
@@ -73,7 +64,7 @@ export default function Combobox({ title, content, onChange }: Props) {
 									<Check
 										className={cn(
 											"h-4 w-4",
-											value.includes(item) ? "opacity-100" : "opacity-0",
+											values.includes(item) ? "opacity-100" : "opacity-0",
 										)}
 									/>
 								</CommandItem>
