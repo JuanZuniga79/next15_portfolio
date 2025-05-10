@@ -9,8 +9,8 @@ interface Props {
 }
 export default function HeroContactListItem({ Icon, content, link }: Props) {
 	return (
-		<li className="flex items-center gap-x-2 text-text dark:text-dark-text">
-			<figure className="w-6 h-6">{Icon}</figure>
+		<li className="flex items-center gap-x-2 text-text dark:text-dark-text text-sm font-sans">
+			<figure className="w-4 h-4 xl:w-6 xl:h-6">{Icon}</figure>
 			{link ? (
 				<Link
 					href={link}
@@ -20,7 +20,7 @@ export default function HeroContactListItem({ Icon, content, link }: Props) {
 					{content} <LinkIcon />
 				</Link>
 			) : (
-				<span className="font-sans text-lg text-subtext-0 dark:text-dark-subtext-0">
+				<span className="text-subtext-0 dark:text-dark-subtext-0">
 					{content}
 				</span>
 			)}

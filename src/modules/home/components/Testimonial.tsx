@@ -13,7 +13,7 @@ export default function Testimonial({ data }: Props) {
 			<div className="flex items-center gap-x-2 justify-between">
 				<div className="flex items-center gap-x-3 text-sm font-light">
 					<figure
-						className="min-w-12 min-h-12 max-w-12 rounded-full flex items-center justify-center 
+						className="min-h-8 min-w-8 max-w-8 2xl:min-w-12 2xl:min-h-12 2xl:max-w-12 rounded-full flex items-center justify-center 
                         p-0.5"
 					>
 						{data.type === "image" && (
@@ -28,16 +28,15 @@ export default function Testimonial({ data }: Props) {
 					</figure>
 					<div className="flex flex-col">
 						<span>{data.name}</span>
-						<span className="text-text/70 dark:text-dark-text/70">
+						<span className="text-text/70 dark:text-dark-text/70 text-xs">
 							{data.subtitle}
 						</span>
 					</div>
 				</div>
 			</div>
-			<p className="text-wrap break-words font-sans text-sm font-light italic">
+			<p className="text-wrap break-words font-sans text-xs font-light italic">
 				{data.description}
 			</p>
 		</li>
 	);
 }
-

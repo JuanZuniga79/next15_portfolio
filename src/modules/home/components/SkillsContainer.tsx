@@ -34,33 +34,30 @@ export default function SkillsContainer() {
 	const t = useTranslations("Skills");
 
 	return (
-		<div className="relative flex flex-col items-center">
+		<div className="relative flex flex-col gap-y-4 items-center w-full overflow-x-hidden">
 			<SkillFilters changeFilter={changeFilter} active={active} />
-			<ul
-				className="border-[1px] border-text/60 dark:border-dark-text/60
-                w-full rounded-xl p-8 grid grid-cols-4 gap-5 transition-all duration-150 h-fit"
-			>
+			<ul className="w-full rounded-xl grid grid-cols-2 gap-1.5 transition-all duration-150 h-fit">
 				{data.map((skill, i) => (
 					<li
 						key={i}
-						className={`border-[1px] border-text/40 dark:border-dark-text/40
-                        ${getShadow(skill.level)} py-4 w-full
-                        px-3 rounded-lg flex flex-col gap-4 hover:shadow-lg`}
+						className={`border-[1px] border-text/40 dark:border-dark-text/40 px-1 py-2
+                        ${getShadow(skill.level)} w-full
+                        rounded-lg flex flex-col gap-4 hover:shadow-lg`}
 					>
-						<div className="flex items-end gap-x-2 relative">
-							<figure className="w-8 h-8">
+						<div className="flex items-end gap-x-0.5 relative">
+							<figure className="w-5 h-5">
 								<skill.icon />
 							</figure>
 							<div className="flex items-center gap-x-4">
-								<h5 className="capitalize font-mono font-semibold text-xl">
+								<h5 className="capitalize font-mono font-semibold text-sm">
 									{skill.name}
 								</h5>
 							</div>
 						</div>
-						<div className="flex flex-col gap-y-1 relative w-full pl-6">
-							<div className="grid grid-cols-[140px_110px] gap-x-4 gap-y-2 text-xs px-4 font-mono font-light">
-								<div className="flex items-center gap-x-2">
-									<Pickaxe size={17} />
+						<div className="flex flex-col relative w-full">
+							<div className="flex flex-wrap gap-2 text-xs font-mono font-light">
+								<div className="flex items-center gap-x-1">
+									<Pickaxe size={14} />
 									<p className="capitalize">{skill.subcategory}</p>
 								</div>
 								<div className="flex items-center gap-x-1">
@@ -80,7 +77,7 @@ export default function SkillsContainer() {
 									</figure>
 									<p className="capitalize">{skill.level}</p>
 								</div>
-								<div className="flex flex-col gap-y-0.5 col-span-2 mt-2">
+								<div className="flex flex-col gap-y-0.5 col-span-2 mt-2 w-full">
 									<span className="capitalize">{t("skill")}</span>
 									<div
 										className="w-full flex items-center bg-crust dark:bg-dark-text 

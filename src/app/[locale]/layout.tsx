@@ -49,8 +49,8 @@ export default async function LocaleLayout({
 				<NextIntlClientProvider>
 					<Header />
 					<main
-						className="relative min-h-dvh h-fit w-[80%] flex flex-col gap-y-20 text-text
-                        dark:text-dark-text pb-16"
+						className="relative min-h-dvh h-fit w-full xl:w-[80%] flex flex-col gap-y-20 text-text
+                        dark:text-dark-text pb-16 pt-32 px-5"
 					>
 						{children}
 					</main>
