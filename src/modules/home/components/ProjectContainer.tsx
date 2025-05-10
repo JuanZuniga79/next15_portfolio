@@ -54,16 +54,24 @@ export default function ProjectContainer({ locale }: Props) {
 						key={i}
 						className="border-[1px] border-text/60 dark:border-dark-text/60 rounded-lg overflow-hidden flex flex-col gap-y-4 pb-1.5 relative"
 					>
-						<figure className="bg-blue dark:bg-dark-red px-3 absolute text-dark-text dark:text-text top-2 right-2">
-							<span>Featured</span>
-						</figure>
-						<Image
-							src={project.picture}
-							alt={`${project.name} picture`}
-							width={500}
-							height={500}
-							className="w-full h-[200px] min-h-[200px]"
-						/>
+						{project.featured && (
+							<figure className="bg-blue dark:bg-dark-red px-3 absolute text-dark-text dark:text-text top-2 right-2">
+								<span>Featured</span>
+							</figure>
+						)}
+						{project.picture.length > 0 ? (
+							<Image
+								src={project.picture}
+								alt={`${project.name} picture`}
+								width={500}
+								height={500}
+								className="w-full h-[200px] min-h-[200px]"
+							/>
+						):(
+							<figure className="div w-full h-[200px] min-h-[200px] flex items-center justify-center">
+								<span className="font-mono font-bold text-6xl">404</span>
+							</figure>
+						)}
 						<div className="flex flex-col px-4 justify-between h-full">
 							<h4 className="font-mono text-lg">{project.name}</h4>
 							<p className="font-sans text-base first-letter:capitalize font-light">

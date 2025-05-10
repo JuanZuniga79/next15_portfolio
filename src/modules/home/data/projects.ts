@@ -26,6 +26,7 @@ const getProjects = (locale: string, filters: string[]) => {
 			picture:
 				"https://raw.githubusercontent.com/JuanZuniga79/projects-docs/refs/heads/main/astro5_portfolio/2025-05-09_10-54.png",
 			type: "Web Page",
+			featured: true,
 			technologies: [
 				"reactjs",
 				"tailwindcss",
@@ -37,6 +38,24 @@ const getProjects = (locale: string, filters: string[]) => {
 			repo: "https://github.com/JuanZuniga79/portfolio",
 			live: "https://juanzuniga.vercel.app/en/",
 		},
+		{
+			name: "Arch Linux Rice", category: "Arch Personalization",
+			description: locale === "en" ?
+				"configuration files for TWM personalization" :
+				"archivos de configuracion para personalizacion de TWM",
+			picture: "https://raw.githubusercontent.com/JuanZuniga79/arch-dotfiles/refs/heads/main/screenshots/1.png",
+			type: "Dotfiles",
+			repo: "https://github.com/JuanZuniga79/arch-dotfiles",
+			technologies: ["python", "qtile", "bash", "zsh", "toml"]
+		},
+		{
+			name: "OL Software", category: "Technical Test",
+			description: "",
+			picture: "",
+			type: "Web FullStack",
+			repo: "https://github.com/JuanZuniga79/OL-TechnicalTest",
+			technologies: ["nextjs", "reactjs", "tailwindcss", "nestjs", "bunjs", "docker", "docker compose", "postgresql", "redis", "erd design", "typescript"],
+		}
 	];
 	if (filters.length === 0) return items;
 	return items.filter((item) =>
