@@ -38,7 +38,7 @@ export default async function LeftHero() {
 			<HeroItemContainer title={t("info")}>
 				<ul
 					className="flex items-center justify-around flex-wrap gap-x-3 pt-2 lg:pt-0 gap-y-5 lg:gap-y-2
-          text-sm sm:text-base lg:text-sm"
+          text-sm sm:text-base lg:text-sm 2xl:text-base"
 				>
 					{professionalInfo.map((item, i) => (
 						<li key={i} className="flex flex-col items-center">

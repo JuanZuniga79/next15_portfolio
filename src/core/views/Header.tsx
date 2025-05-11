@@ -17,7 +17,7 @@ export default async function Header() {
 			className="w-full h-16 md:h-20 border-b-crust border-b-[1px] flex items-center justify-center
             dark:border-b-dark-crust fixed top-0 left-0 backdrop-blur-sm z-20"
 		>
-			<div className="w-[90%] xl:w-[80%] flex items-center justify-between md:grid grid-cols-4">
+			<div className="w-[90%] xl:w-[90%] 2xl:w-[80%] flex items-center justify-between md:grid grid-cols-4">
 				<div className="flex items-center gap-x-2 justify-self-start">
 					<figure className="w-[24px] h-[38px] xl:w-[32px] xl:h-[46px] scale-90">
 						<Image src={light} alt="page Icon" className="dark:hidden" />

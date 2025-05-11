@@ -34,7 +34,7 @@ export default function ProjectContainer({ locale }: Props) {
 		<div className="flex flex-col gap-y-5">
 			<ul
 				className={`w-full rounded-xl bg-transparent transition-all duration-100 ease-in-out h-fit
-                    grid grid-cols-2 md:grid-cols-3 gap-5 overflow-hidden px-2`}
+                    grid grid-cols-2 md:grid-cols-3 gap-5 overflow-hidden px-2 2xl:grid-cols-5`}
 			>
 				{filters.map((filter, index) => (
 					<li key={index} className="w-full h-fit">
@@ -48,7 +48,7 @@ export default function ProjectContainer({ locale }: Props) {
 					</li>
 				))}
 			</ul>
-			<ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+			<ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 gap-2">
 				{data.map((project, i) => (
 					<li
 						key={i}

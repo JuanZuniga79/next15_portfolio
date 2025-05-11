@@ -138,7 +138,7 @@ export async function TimelineItem({
 								{listTitle && listTitle}
 							</span>
 						</div>
-						<ul className="flex flex-col gap-y-1 pl-[24px] text-xs sm:text-sm">
+						<ul className="flex flex-col gap-y-1 pl-[24px] text-xs sm:text-sm xl:text-base">
 							{children}
 						</ul>
 					</div>

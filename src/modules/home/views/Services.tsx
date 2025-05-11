@@ -13,7 +13,7 @@ export default async function Services({ locale }: Props) {
 
 	return (
 		<SectionContainer title={t("title")} subtitle={t("subtitle")}>
-			<ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
+			<ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 gap-5">
 				{data.map((item: IService, i) => (
 					<li
 						key={i}
@@ -31,11 +31,13 @@ export default async function Services({ locale }: Props) {
 										<item.icon />
 									</figure>
 								</div>
-								<h5 className="font-mono font-semibold text-base xl:text-lg">
+								<h5 className="font-mono font-semibold text-base xl:text-lg 2xl:text-xl">
 									{item.title}
 								</h5>
 							</div>
-							<p className="text-xs sm:text-sm font-sans">{item.description}</p>
+							<p className="text-xs sm:text-sm 2xl:text-base font-sans">
+								{item.description}
+							</p>
 						</div>
 						<Link
 							href="/about/#services"

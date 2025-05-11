@@ -38,7 +38,7 @@ export default function SkillsContainer() {
 			<SkillFilters changeFilter={changeFilter} active={active} />
 			<ul
 				className="w-full rounded-xl grid grid-cols-2 md:grid-cols-3 gap-1.5 
-        transition-all duration-150 h-fit"
+        transition-all duration-150 h-fit xl:grid-cols-4 2xl:grid-cols-6"
 			>
 				{data.map((skill, i) => (
 					<li

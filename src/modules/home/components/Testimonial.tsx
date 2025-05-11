@@ -30,13 +30,16 @@ export default function Testimonial({ data }: Props) {
 						<span className="text-base sm:text-lg font-mono font-semibold">
 							{data.name}
 						</span>
-						<span className="text-text/70 dark:text-dark-text/70 text-xs">
+						<span className="text-text/70 dark:text-dark-text/70 text-xs xl:text-sm">
 							{data.subtitle}
 						</span>
 					</div>
 				</div>
 			</div>
-			<p className="text-wrap break-words font-sans text-xs sm:text-sm font-light italic">
+			<p
+				className="text-wrap break-words font-sans text-xs sm:text-sm font-light 
+        italic xl:text-base"
+			>
 				{data.description}
 			</p>
 		</li>

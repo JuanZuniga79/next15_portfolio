@@ -34,7 +34,7 @@ export default async function EducationNExperience({ locale }: Props) {
 									<li key={i} className="gap-x-4 flex items-baseline">
 										<figure
 											className="min-w-1 h-1 rounded-full bg-text
-                                            dark:bg-dark-text"
+                                dark:bg-dark-text"
 										/>
 										<span className="font-sans">{item}</span>
 									</li>
@@ -59,4 +59,3 @@ export default async function EducationNExperience({ locale }: Props) {
 		</SectionContainer>
 	);
 }
-
