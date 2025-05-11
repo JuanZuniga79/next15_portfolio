@@ -14,14 +14,17 @@ export default async function Nav({ lang }: Props) {
 	const pathname = fullUrl ? new URL(fullUrl).pathname : "/";
 
 	return (
-		<nav className="text-text dark:text-dark-text col-span-2 justify-self-center hidden">
-			<ul className="xl:flex items-center gap-x-2">
+		<nav
+			className="text-text dark:text-dark-text col-span-2 justify-self-center hidden md:flex
+      items-center justify-center"
+		>
+			<ul className="flex items-center gap-x-2">
 				{data.map((item, i) => (
 					<li
 						key={i}
-						className={`navItem relative capitalize font-sans px-3 
+						className={`navItem relative capitalize font-mono px-3 md:text-lg
                         ${pathname === item.href && "active text-text dark:text-dark-text"} transition-colors 
-                        focus-visible:outline-none duration-300 font-medium text-base`}
+                        focus-visible:outline-none duration-300 font-semibold text-base`}
 					>
 						<Link id={item.href} label={item.label} />
 					</li>
@@ -30,4 +33,3 @@ export default async function Nav({ lang }: Props) {
 		</nav>
 	);
 }
-

@@ -33,7 +33,8 @@ export default function Combobox({ title, content, onChange }: Props) {
 					role="combobox"
 					aria-expanded={open}
 					className="w-full justify-between capitalize font-sans border-[1px] border-mantle hover:border-crust cursor-pointer hover:bg-mantle
-            dark:border-dark-mantle dark:hover:border-dark-crust dark:hover:bg-dark-crust dark:text-dark-text"
+            dark:border-dark-mantle dark:hover:border-dark-crust dark:hover:bg-dark-crust dark:text-dark-text
+            text-base"
 				>
 					{values.length >= 1
 						? `${values.length > 1 ? `selected ${values.length} items` : values[0]}`

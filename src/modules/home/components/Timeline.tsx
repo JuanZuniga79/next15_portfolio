@@ -71,11 +71,14 @@ export async function TimelineItem({
 				<div className="flex flex-col gap-y-0.5 w-fit">
 					<div className="flex items-center gap-x-1">
 						<figure className="min-w-5 min-h-5">{icon}</figure>
-						<h5 className="font-mono capitalize text-sm font-semibold text-wrap">
+						<h5 className="font-mono capitalize text-sm sm:text-lg font-semibold text-wrap">
 							{item.title}
 						</h5>
 					</div>
-					<div className="flex items-center gap-x-3 gap-y-1 pl-5 text-xs flex-wrap font-light font-sans w-full">
+					<div
+						className="flex items-center gap-x-3 gap-y-1 pl-5 text-xs flex-wrap font-light font-sans 
+            w-full sm:text-sm"
+					>
 						<div className="flex items-center gap-x-1">
 							<figure className="w-5 h-5">
 								<FrontendIcon />
@@ -128,14 +131,14 @@ export async function TimelineItem({
                         border-text/40 dark:border-dark-text/40 rounded-2xl"
 					>
 						<div className="flex items-center gap-x-1 px-3">
-							<figure className="w-5 h-5 xl:w-7 xl:h-7">
+							<figure className="w-5 h-5 sm:w-6 sm:h-6 xl:w-7 xl:h-7">
 								<AchievementIcon />
 							</figure>
-							<span className="font-serif text-sm font-semibold place-self-end">
+							<span className="font-serif text-sm sm:text-lg font-semibold place-self-end">
 								{listTitle && listTitle}
 							</span>
 						</div>
-						<ul className="flex flex-col gap-y-1 pl-[24px] text-xs">
+						<ul className="flex flex-col gap-y-1 pl-[24px] text-xs sm:text-sm">
 							{children}
 						</ul>
 					</div>
@@ -144,4 +147,3 @@ export async function TimelineItem({
 		</li>
 	);
 }
-

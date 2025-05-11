@@ -11,9 +11,9 @@ export default async function LeftHero() {
 	const t = await getTranslations("Home");
 
 	return (
-		<section className="flex flex-col gap-y-4 items-start justify-center w-full">
+		<section className="flex flex-col gap-y-4 sm:gap-y-8 lg:gap-y-2 items-start justify-center w-full">
 			<HeroItemContainer title={t("contact")}>
-				<ul className="flex flex-col gap-y-2 items-center">
+				<ul className="flex flex-col gap-y-2 sm:gap-y-4 lg:gap-y-1 items-center lg:items-start">
 					<HeroContactListItem
 						Icon={<LocationIcon />}
 						content="Santa Marta, Colombia"
@@ -36,7 +36,10 @@ export default async function LeftHero() {
 				</ul>
 			</HeroItemContainer>
 			<HeroItemContainer title={t("info")}>
-				<ul className="flex items-center justify-around flex-wrap gap-x-3 pt-2 gap-y-5 text-sm">
+				<ul
+					className="flex items-center justify-around flex-wrap gap-x-3 pt-2 lg:pt-0 gap-y-5 lg:gap-y-2
+          text-sm sm:text-base lg:text-sm"
+				>
 					{professionalInfo.map((item, i) => (
 						<li key={i} className="flex flex-col items-center">
 							<p className="font-sans">

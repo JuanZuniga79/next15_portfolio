@@ -34,7 +34,7 @@ export default function ProjectContainer({ locale }: Props) {
 		<div className="flex flex-col gap-y-5">
 			<ul
 				className={`w-full rounded-xl bg-transparent transition-all duration-100 ease-in-out h-fit
-                    grid grid-cols-2 gap-5 overflow-hidden px-2`}
+                    grid grid-cols-2 md:grid-cols-3 gap-5 overflow-hidden px-2`}
 			>
 				{filters.map((filter, index) => (
 					<li key={index} className="w-full h-fit">
@@ -48,7 +48,7 @@ export default function ProjectContainer({ locale }: Props) {
 					</li>
 				))}
 			</ul>
-			<ul className="grid grid-cols-1 gap-2">
+			<ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
 				{data.map((project, i) => (
 					<li
 						key={i}
@@ -65,7 +65,7 @@ export default function ProjectContainer({ locale }: Props) {
 								alt={`${project.name} picture`}
 								width={500}
 								height={500}
-								className="w-full 2xl:h-[200px] 2xl:min-h-[200px]"
+								className="w-full md:h-[200px] md:min-h-[200px]"
 							/>
 						) : (
 							<figure className="div w-full h-[200px] min-h-[200px] flex items-center justify-center">
@@ -73,24 +73,25 @@ export default function ProjectContainer({ locale }: Props) {
 							</figure>
 						)}
 						<div className="flex flex-col px-4 justify-between h-full">
-							<h4 className="font-mono text-base font-medium">
+							<h4 className="font-mono text-base md:text-lg font-medium">
 								{project.name} | {project.category}
 							</h4>
-							<p className="font-sans text-sm first-letter:capitalize font-light">
+							<p className="font-sans text-sm md:text-base first-letter:capitalize font-light">
 								{project.description}
 							</p>
 							<ul className="flex items-center gap-2 justify-start flex-wrap pt-3">
 								{project.technologies.map((tech, i) => (
 									<li
 										key={i}
-										className="px-2 font-mono text-xs capitalize bg-blue text-dark-text dark:bg-dark-red rounded-md"
+										className="px-2 font-mono text-xs capitalize bg-blue text-dark-text 
+                    dark:bg-dark-red rounded-md md:text-sm"
 									>
 										{tech}
 									</li>
 								))}
 							</ul>
 							<div className="flex items-center justify-between gap-x-2 mt-2">
-								<span className="font-mono text-xs capitalize font-light">
+								<span className="font-mono text-xs md:text-sm capitalize font-light">
 									{project.type}
 								</span>
 								<div className="flex items-center gap-x-1">

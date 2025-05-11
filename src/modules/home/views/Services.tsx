@@ -13,7 +13,7 @@ export default async function Services({ locale }: Props) {
 
 	return (
 		<SectionContainer title={t("title")} subtitle={t("subtitle")}>
-			<ul className="grid grid-cols-1 xl:grid-cols-4 gap-5">
+			<ul className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-5">
 				{data.map((item: IService, i) => (
 					<li
 						key={i}
@@ -27,7 +27,7 @@ export default async function Services({ locale }: Props) {
 									className="text-dark-mantle dark:text-mantle bg-crust dark:bg-dark-crust
                                     flex items-center justify-center rounded-xl p-1.5"
 								>
-									<figure className="w-4 h-4 xl:w-6 xl:h-6">
+									<figure className="w-4 h-4 sm:w-5 sm:h-5 xl:w-6 xl:h-6">
 										<item.icon />
 									</figure>
 								</div>
@@ -35,13 +35,13 @@ export default async function Services({ locale }: Props) {
 									{item.title}
 								</h5>
 							</div>
-							<p className="text-xs font-sans">{item.description}</p>
+							<p className="text-xs sm:text-sm font-sans">{item.description}</p>
 						</div>
 						<Link
 							href="/about/#services"
 							className="py-1 px-4 border-t border-crust text-xs capitalize font-mono flex items-center
                         gap-x-2 hover:gap-x-4 transition-all duration-100 cursor-pointer justify-start
-                        dark:border-crust/60"
+                        dark:border-crust/60 sm:text-sm"
 						>
 							<span>{t("know")}</span>
 							<span>{"->"}</span>
@@ -52,4 +52,3 @@ export default async function Services({ locale }: Props) {
 		</SectionContainer>
 	);
 }
-

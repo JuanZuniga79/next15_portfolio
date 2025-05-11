@@ -27,14 +27,16 @@ export default function Testimonial({ data }: Props) {
 						)}
 					</figure>
 					<div className="flex flex-col">
-						<span>{data.name}</span>
+						<span className="text-base sm:text-lg font-mono font-semibold">
+							{data.name}
+						</span>
 						<span className="text-text/70 dark:text-dark-text/70 text-xs">
 							{data.subtitle}
 						</span>
 					</div>
 				</div>
 			</div>
-			<p className="text-wrap break-words font-sans text-xs font-light italic">
+			<p className="text-wrap break-words font-sans text-xs sm:text-sm font-light italic">
 				{data.description}
 			</p>
 		</li>

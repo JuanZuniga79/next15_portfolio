@@ -36,26 +36,32 @@ export default function SkillsContainer() {
 	return (
 		<div className="relative flex flex-col gap-y-4 items-center w-full overflow-x-hidden">
 			<SkillFilters changeFilter={changeFilter} active={active} />
-			<ul className="w-full rounded-xl grid grid-cols-2 gap-1.5 transition-all duration-150 h-fit">
+			<ul
+				className="w-full rounded-xl grid grid-cols-2 md:grid-cols-3 gap-1.5 
+        transition-all duration-150 h-fit"
+			>
 				{data.map((skill, i) => (
 					<li
 						key={i}
 						className={`border-[1px] border-text/40 dark:border-dark-text/40 px-1 py-2
-                        ${getShadow(skill.level)} w-full
+                        ${getShadow(skill.level)} w-full md:px-3 md:py-4
                         rounded-lg flex flex-col gap-4 hover:shadow-lg`}
 					>
-						<div className="flex items-end gap-x-0.5 relative">
-							<figure className="w-5 h-5">
+						<div className="flex items-center gap-x-0.5 sm:gap-x-2 relative">
+							<figure className="w-5 h-5 md:w-6 md:h-6">
 								<skill.icon />
 							</figure>
 							<div className="flex items-center gap-x-4">
-								<h5 className="capitalize font-mono font-semibold text-sm">
+								<h5
+									className="capitalize font-mono font-semibold text-sm
+                  md:text-base"
+								>
 									{skill.name}
 								</h5>
 							</div>
 						</div>
 						<div className="flex flex-col relative w-full">
-							<div className="flex flex-wrap gap-2 text-xs font-mono font-light">
+							<div className="flex flex-wrap gap-2 text-xs md:text-sm font-mono font-light">
 								<div className="flex items-center gap-x-1">
 									<Pickaxe size={14} />
 									<p className="capitalize">{skill.subcategory}</p>

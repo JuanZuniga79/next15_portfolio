@@ -50,7 +50,7 @@ export default async function LocaleLayout({
 					<Header />
 					<main
 						className="relative min-h-dvh h-fit w-full xl:w-[80%] flex flex-col gap-y-20 text-text
-                        dark:text-dark-text pb-16 pt-32 px-5"
+                        dark:text-dark-text pb-16 pt-32 px-5 lg:pt-24"
 					>
 						{children}
 					</main>
