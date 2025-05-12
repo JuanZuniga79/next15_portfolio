@@ -49,7 +49,7 @@ export default async function Hero() {
 				</figure>
 			</section>
 			<div className="order-2 lg:order-3">
-				<RightHero service={t("services")} skill={t("skill")} />
+				<RightHero skill={t("skill")} />
 			</div>
 		</div>
 	);

@@ -1,12 +1,10 @@
 ﻿import HeroItemContainer from "@/modules/home/components/HeroItemContainer";
-import services from "@/core/data/services";
 import outstandingSkills from "@/core/data/outstandingSkills";
 
 interface Props {
-	service: string;
 	skill: string;
 }
-export default function RightHero({ service, skill }: Props) {
+export default function RightHero({ skill }: Props) {
 	return (
 		<section className="flex flex-col gap-y-4 sm:gap-y-10 items-center justify-center">
 			<HeroItemContainer title={skill} right>
